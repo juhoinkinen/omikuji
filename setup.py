@@ -44,8 +44,12 @@ setup(
     package_dir={"": "python-wrapper"},
     zip_safe=False,
     platforms="any",
-    setup_requires=["milksnake"],
-    install_requires=["milksnake"],
+    setup_requires=[
+        "milksnake @ git+ssh://git@github.com/getsentry/milksnake/#421cc1ffab4d76d01366240c087ffb30d63b744c"  # PR #32
+    ],
+    install_requires=[
+        "milksnake @ git+ssh://git@github.com/getsentry/milksnake/#421cc1ffab4d76d01366240c087ffb30d63b744c"  # PR #32
+    ],
     milksnake_tasks=[build_native],
     milksnake_universal=False,
     classifiers=[
